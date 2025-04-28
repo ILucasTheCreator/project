@@ -1,1 +1,41 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="/static/styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1></h1>
+        <form method="POST">
+            <div class="form-group">
+                <label for="city" id="entercity">Enter City:</label>
+                {% if error %}
+                    <div id="error_message">{{error}}</div>
+                {%endif%}
+                <input type="text" class="form-control" id="city" name="city" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Get Weather</button>
+        </form>
+        <video autoplay muted loop playsinline id="bg-video">
+            <source src="{{ url_for('static', filename=backround_image) }}" type="video/webm">
+        </video>
+    <div style="margin-top: 50px;"></div>
+    <div id="cityname">
+        {{ city_name }}
+    </div>
+    <div id="tempeture">
+        {{ tempeture}}&#176;
+    </div>
+    <div id="temp_min_max">
+        L:{{ temp_min}}&#176; H:{{ temp_max }}&#176;
+    </div>
+    <div style="margin-top: 20px;" id="description">
+        {{description}} feels like {{feels_like}}&#176;
+    </div>
+</body>
+<script>
+    document.body.style.backgroundColor = "{{backround_color}}";
+</script>
+</html>
