@@ -1,1 +1,48 @@
-
+#title {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+#cityname {
+    text-align:center;
+    color: black;
+    font-size:48px;
+    font-family: 'Monaco', monospace;
+}
+#tempeture {
+    text-align: center;
+    color:black;
+    font-size:185px;
+    font-family: 'Verdana', sans-serif;
+}
+#temp_min_max {
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    font-family: 'Monaco', monospace; 
+}
+#description {
+    text-align: center;
+    color: black;
+    font-size: 25px;
+    font-family: 'Monaco', monospace; 
+}
+#bg-video {
+position: fixed;
+z-index: -1; 
+Pointer-events: none;
+object-fit: cover;
+display: block;
+transform: scale(3);
+bottom:210px;
+}
+#entercity {
+    color: black;
+    font-style: bold;
+}
+#error_message {
+    color: red;
+    font-size: 20px;
+    font-family: "Gill Sans", sans-serif;
+}
